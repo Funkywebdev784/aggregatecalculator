@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aggregator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=0">
+	
+
+		<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body class="bod">
+<div class="all">
+	<div class="topnav">
+
+  <a class="title"><b>Aggregate Calculator</b></a> <!--
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a> -->
+</div>
+<br><br>
+</div>
+<div class="custom-select" >
+  <select class="custom-select" id="my_select">
+    <option id="material" value="0">Select Material:</option>
+    <option id="ballast" value="bal">Ballast</option>
+    <option id="topsoil" value="top">Topsoil</option>
+    <option id="type1" value="typ">Type 1</option>
+    <option id="softsand" value="sof">Softsand</option>
+    <option id="sharpsand" value="sha">Sharpsand</option>
+    <option id="shingle" value="shi">Shingle</option>
+    <option id="stiffclay" value="sti">StiffClay</option>
+    <option id="limestone" value="lim">Limestone</option>
+
+  </select>
+
+<br><br>
+
+
+<input type="number" class="custom-select" id="number" placeholder="Cubic Meters"><br><br>
+
+<label class="arit" for="amount">Amount Required in Tonnes:</label><br><br>
+    <input class="custom-select" type="text" id="amount" value="0" toFixed="2" disabled/><br><br>
+    <input class="button" type="button" value="Calculate" onclick="calculate()" />
+<!--<input type="button" name="Calculate" id="result" onclick="calculate()"/><br><br>-->
+<!--<input type="text" id="displayResult"> -->
+<input class="button" type="button" value="Reset" onclick="reset()"  /><br>
+</div>
+</div>
+
+<script >
+  
+function calculate() {
+
+    
+    //var ballast = document.getElementById("ballast").value;
+    var mysl = document.getElementById("my_select").value;
+    var number = document.getElementById("number").value;
+    //var result = number * 1.76;
+
+    if (mysl === "bal") 
+
+  {
+    document.getElementById("amount").value = number * 1.76.toFixed(2);
+
+  }
+
+    if (mysl === "top") 
+
+  {
+
+    document.getElementById("amount").value = number * 1.44.toFixed(2);
+
+  }
+
+
+    if (mysl === "typ") 
+
+  {
+
+    document.getElementById("amount").value = number * 1.92.toFixed(2);
+
+  }//document.getElementById("amount").value = String(result);
+    
+
+    if (mysl === "sof") 
+
+  {
+    document.getElementById("amount").value = number * 1.28.toFixed(2);
+
+  }
+
+    if (mysl === "sha") 
+
+  {
+
+    document.getElementById("amount").value = number * 1.6.toFixed(2);
+
+  }
+
+
+    if (mysl === "shi") 
+
+  {
+
+    document.getElementById("amount").value = number * 1.62.toFixed(2);
+
+  }
+
+    if (mysl === "sti") 
+
+  {
+
+    document.getElementById("amount").value = number * 1.6.toFixed(2);
+
+  }
+
+
+    if (mysl === "lim") 
+
+  {
+
+    document.getElementById("amount").value = number * 2.1.toFixed(2);
+
+  }
+
+  
+}
+
+
+    function reset()
+
+  {
+      document.getElementById("amount").value = "0";
+      document.getElementById("number").value = "Cubic Meters";
+      document.getElementById("my_select").selectedIndex = 0;
+  
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
