@@ -21,7 +21,9 @@
 </div>
 <br><br>
 </div>
+	
 <div class="custom-select" >
+	<form>
   <select class="custom-select" id="my_select">
     <option id="material" value="0">Select Material:</option>
     <option id="ballast" value="bal">Ballast</option>
@@ -37,16 +39,16 @@
 
 <br><br>
 
-	<form>
-	<label for"cubicmeters">Cubic Meters</label>
-		<input type="number" class="custom-select" id="number" ><br><br></form>
+	
+	
+		<input type="number" class="custom-select" id="number" placeholder="Cubic Meters"><br><br>
 
 <label class="arit" for="amount">Amount Required in Tonnes:</label><br><br>
     <input class="custom-select" type="text" id="amount" value="0" toFixed="2" disabled/><br><br>
     <input class="button" type="button" value="Calculate" onclick="calculate()" />
 <!--<input type="button" name="Calculate" id="result" onclick="calculate()"/><br><br>-->
 <!--<input type="text" id="displayResult"> -->
-<input class="button" type="button" value="Reset" onclick="reset()"  /><br>
+<input class="button" type="button" value="Reset" onclick="reset()"  /><br></form>
 </div>
 </div>
 
